@@ -11,6 +11,7 @@
     "com.unity.ugui": "1.0.0",
     "com.unity.xr.interaction.toolkit": "2.1.0-pre.1",
     "com.unity.xr.management": "4.2.1",
+    "com.unity.xr.picoxr": "file:../PICO Unity IntegrationSDK-214-20230302",
     "com.unity.modules.ai": "1.0.0",
     "com.unity.modules.androidjni": "1.0.0",
     "com.unity.modules.animation": "1.0.0",
