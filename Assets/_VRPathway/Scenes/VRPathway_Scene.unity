@@ -152,6 +152,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2805297271899463646, guid: 46d3f063a5d8cac488b3f446e696a1d3,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.8
+      objectReference: {fileID: 0}
     - target: {fileID: 2805297271977001978, guid: 46d3f063a5d8cac488b3f446e696a1d3,
         type: 3}
       propertyPath: far clip plane
