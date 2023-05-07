@@ -53,11 +53,17 @@ public class Scanner : XRGrabInteractable
 
     private void ScanForObjects()
     {
+        Vector3 worldHit = laserRenderer.transform.position + laserRenderer.transform.forward * 1000.0f; // new line
+
         if (Physics.Raycast(laserRenderer.transform.position, laserRenderer.transform.forward, out RaycastHit hit))
         {
+            worldHit = hit.point; // new line
             targetName.SetText($"Name: {hit.collider.name}");
             targetPosition.SetText($"Position: {hit.collider.transform.position}");
         }
+
+        laserRenderer.SetPosition(1, laserRenderer.transform.InverseTransformPoint(worldHit)); // new line
+
     }
 
     protected override void OnDeactivated(DeactivateEventArgs args)
