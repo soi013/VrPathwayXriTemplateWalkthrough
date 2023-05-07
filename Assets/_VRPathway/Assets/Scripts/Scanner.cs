@@ -9,11 +9,17 @@ public class Scanner : XRGrabInteractable
 
     void Start()
     {
-        animator.SetBool("Opened", true);
     }
 
     void Update()
     {
 
+    }
+
+    protected override void OnSelectEntered(SelectEnterEventArgs args)
+    {
+        base.OnSelectEntered(args);
+
+        animator.SetBool("Opened", true);
     }
 }
