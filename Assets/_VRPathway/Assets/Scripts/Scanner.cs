@@ -47,6 +47,17 @@ public class Scanner : XRGrabInteractable
         base.OnActivated(args);
         ChangeRaserActivate(true);
         ChangeTextActivate(true);
+
+        ScanForObjects();
+    }
+
+    private void ScanForObjects()
+    {
+        if (Physics.Raycast(laserRenderer.transform.position, laserRenderer.transform.forward, out RaycastHit hit))
+        {
+            targetName.SetText($"Name: {hit.collider.name}");
+            targetPosition.SetText($"Position: {hit.collider.transform.position}");
+        }
     }
 
     protected override void OnDeactivated(DeactivateEventArgs args)
