@@ -40,13 +40,13 @@ public class Scanner : XRGrabInteractable
     private void ChangeOpen(bool isOpen)
     {
         animator.SetBool("Opened", isOpen);
+        ChangeTextActivate(isOpen);
     }
 
     protected override void OnActivated(ActivateEventArgs args)
     {
         base.OnActivated(args);
         ChangeRaserActivate(true);
-        ChangeTextActivate(true);
     }
 
     private void ScanForObjects()
@@ -56,19 +56,29 @@ public class Scanner : XRGrabInteractable
         if (Physics.Raycast(laserRenderer.transform.position, laserRenderer.transform.forward, out RaycastHit hit))
         {
             worldHit = hit.point; // new line
-            targetName.SetText($"Name: {hit.collider.name}");
-            targetPosition.SetText($"Position: {hit.collider.transform.position}");
+            SetTexts(hit.collider.name, hit.collider.transform.position);
+        }
+        else
+        {
+            SetTexts("---", Vector3.zero);
         }
 
         laserRenderer.SetPosition(1, laserRenderer.transform.InverseTransformPoint(worldHit)); // new line
 
     }
 
+    private void SetTexts(string name, Vector3 position)
+    {
+        targetName.SetText($"Name:\n{name}");
+        targetPosition.SetText($"Position:\n{position}");
+    }
+
     protected override void OnDeactivated(DeactivateEventArgs args)
     {
         base.OnDeactivated(args);
         ChangeRaserActivate(false);
-        ChangeTextActivate(false);
+
+        SetTexts("(Ready)", Vector3.zero);
     }
 
     private void ChangeRaserActivate(bool isOn)
