@@ -125,6 +125,18 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!114 &6242483 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8881830225923515340, guid: 8cbf41f4a70894743ba4385810062306,
+    type: 3}
+  m_PrefabInstance: {fileID: 1036341534}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &20618431
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2052,6 +2064,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 60523e0647cc6ab43acc73cb266a32a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &163406525 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 368156421920259302, guid: 8cbf41f4a70894743ba4385810062306,
+    type: 3}
+  m_PrefabInstance: {fileID: 1036341534}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1001 &177042506
@@ -11237,6 +11261,8 @@ MonoBehaviour:
   m_AddDefaultGrabTransformers: 1
   animator: {fileID: 949011577}
   laserRenderer: {fileID: 59791927}
+  targetName: {fileID: 163406525}
+  targetPosition: {fileID: 6242483}
 --- !u!1001 &954011857
 PrefabInstance:
   m_ObjectHideFlags: 0

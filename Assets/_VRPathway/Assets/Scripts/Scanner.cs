@@ -1,3 +1,4 @@
+using TMPro;
 using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
 
@@ -10,11 +11,19 @@ public class Scanner : XRGrabInteractable
     [SerializeField]
     private LineRenderer laserRenderer;
 
+    [SerializeField]
+    private TextMeshProUGUI targetName;
+
+    [SerializeField]
+    private TextMeshProUGUI targetPosition;
+
     protected override void Awake()
     {
         base.Awake();
-        ChangeRaserEnable(false);
+        ChangeRaserActivate(false);
+        ChangeTextActivate(false);
     }
+
 
     protected override void OnSelectEntered(SelectEnterEventArgs args)
     {
@@ -36,17 +45,26 @@ public class Scanner : XRGrabInteractable
     protected override void OnActivated(ActivateEventArgs args)
     {
         base.OnActivated(args);
-        ChangeRaserEnable(true);
+        ChangeRaserActivate(true);
+        ChangeTextActivate(true);
     }
 
     protected override void OnDeactivated(DeactivateEventArgs args)
     {
         base.OnDeactivated(args);
-        ChangeRaserEnable(false);
+        ChangeRaserActivate(false);
+        ChangeTextActivate(false);
     }
 
-    private void ChangeRaserEnable(bool isOn)
+    private void ChangeRaserActivate(bool isOn)
     {
         laserRenderer.gameObject.SetActive(isOn);
     }
+
+    private void ChangeTextActivate(bool isActive)
+    {
+        targetName.gameObject.SetActive(isActive);
+        targetPosition.gameObject.SetActive(isActive);
+    }
+
 }
