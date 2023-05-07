@@ -1,14 +1,17 @@
+using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
 
 public class Scanner : XRGrabInteractable
 {
-    // Start is called before the first frame update
+
+    [Header("Scanner Data"), SerializeField]
+    private Animator animator;
+
     void Start()
     {
-
+        animator.SetBool("Opened", true);
     }
 
-    // Update is called once per frame
     void Update()
     {
 
