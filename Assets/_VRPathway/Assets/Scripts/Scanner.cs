@@ -7,19 +7,20 @@ public class Scanner : XRGrabInteractable
     [Header("Scanner Data"), SerializeField]
     private Animator animator;
 
-    void Start()
-    {
-    }
-
-    void Update()
-    {
-
-    }
-
     protected override void OnSelectEntered(SelectEnterEventArgs args)
     {
         base.OnSelectEntered(args);
+        ChangeOpen(true);
+    }
 
-        animator.SetBool("Opened", true);
+    protected override void OnSelectExited(SelectExitEventArgs args)
+    {
+        base.OnSelectExited(args);
+        ChangeOpen(false);
+    }
+
+    private void ChangeOpen(bool isOpen)
+    {
+        animator.SetBool("Opened", isOpen);
     }
 }
