@@ -7,6 +7,14 @@ public class Scanner : XRGrabInteractable
     [Header("Scanner Data"), SerializeField]
     private Animator animator;
 
+    [SerializeField]
+    private LineRenderer laserRenderer;
+
+    protected override void Awake()
+    {
+        laserRenderer.gameObject.SetActive(false);
+    }
+
     protected override void OnSelectEntered(SelectEnterEventArgs args)
     {
         base.OnSelectEntered(args);
