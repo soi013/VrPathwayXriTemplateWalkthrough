@@ -47,8 +47,6 @@ public class Scanner : XRGrabInteractable
         base.OnActivated(args);
         ChangeRaserActivate(true);
         ChangeTextActivate(true);
-
-        ScanForObjects();
     }
 
     private void ScanForObjects()
@@ -84,4 +82,13 @@ public class Scanner : XRGrabInteractable
         targetPosition.gameObject.SetActive(isActive);
     }
 
+    public override void ProcessInteractable(XRInteractionUpdateOrder.UpdatePhase updatePhase)
+    {
+        base.ProcessInteractable(updatePhase);
+
+        if (!laserRenderer.gameObject.activeSelf)
+            return;
+
+        ScanForObjects();
+    }
 }
