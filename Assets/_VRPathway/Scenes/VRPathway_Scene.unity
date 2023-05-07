@@ -950,6 +950,12 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 59007980}
   m_CullTransparentMesh: 0
+--- !u!120 &59791927 stripped
+LineRenderer:
+  m_CorrespondingSourceObject: {fileID: 6546815991361313011, guid: 8cbf41f4a70894743ba4385810062306,
+    type: 3}
+  m_PrefabInstance: {fileID: 1036341534}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &67635392
 GameObject:
   m_ObjectHideFlags: 0
@@ -4153,22 +4159,22 @@ PrefabInstance:
     - target: {fileID: 7387125324240799344, guid: efebdf03cb1ccd043827e933755e413e,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7387125324240799344, guid: efebdf03cb1ccd043827e933755e413e,
         type: 3}
       propertyPath: m_AnchorMin.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7387125324240799344, guid: efebdf03cb1ccd043827e933755e413e,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 122
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7387125324240799344, guid: efebdf03cb1ccd043827e933755e413e,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -30
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: efebdf03cb1ccd043827e933755e413e, type: 3}
@@ -11102,6 +11108,7 @@ MonoBehaviour:
   m_StartingMultipleGrabTransformers: []
   m_AddDefaultGrabTransformers: 1
   animator: {fileID: 949011577}
+  laserRenderer: {fileID: 59791927}
 --- !u!1001 &954011857
 PrefabInstance:
   m_ObjectHideFlags: 0

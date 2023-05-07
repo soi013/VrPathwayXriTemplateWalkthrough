@@ -12,6 +12,7 @@ public class Scanner : XRGrabInteractable
 
     protected override void Awake()
     {
+        base.Awake();
         laserRenderer.gameObject.SetActive(false);
     }
 
